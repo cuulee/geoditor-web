@@ -117,15 +117,14 @@ window.$ = window.jQuery = jQuery;
 
 
 /* ============
- * Bootstrap
+ * Normalize
  * ============
  *
- * Require bootstrap
+ * Require normalize.css
  *
  * http://getbootstrap.com/
  */
-require('bootstrap');
-require('bootstrap/less/bootstrap.less');
+require('normalize.css');
 
 
 /* ============
