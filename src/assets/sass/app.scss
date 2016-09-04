@@ -1,3 +1,5 @@
+@import 'branding.scss';
+
 html, body {
   font-size: 16px;
   font-family: Helvetica, Arial;
@@ -14,9 +16,26 @@ html, body {
 }
 
 header {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+
   box-sizing: border-box;
   height: 50px;
-  background-color: red;
+  border-bottom: 1px solid #666;
+  background-color: #333;
+  color: #f3f3f3;
+
+
+  .link-bar {
+    margin-left: auto;
+
+    i {
+      font-size: 20px;
+    }
+  }
+
 }
 
 main {
@@ -26,16 +45,16 @@ main {
 }
 
 aside {
-  background-color: blue;
   width: 300px;
+  background-color: #444;
+  color: #f3f3f3;
+  display: none;
 }
 
 section {
-  background-color: green;
   flex-grow: 1;
 }
 
 footer {
   height: 20px;
-  background-color: orange;
 }
