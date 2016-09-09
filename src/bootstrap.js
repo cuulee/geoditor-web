@@ -115,6 +115,18 @@ import jQuery from 'jquery';
 
 window.$ = window.jQuery = jQuery;
 
+/* ============
+ * Leaflet && Leaflet.PM
+ * ============
+ *
+ * Require Leaflet and Leaflet.PM
+ *
+ */
+import L from 'leaflet';
+import 'leaflet.pm';
+
+window.L = L;
+
 
 /* ============
  * Normalize

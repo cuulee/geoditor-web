@@ -4,5 +4,6 @@ export default {
   components: {
     VLayout: loader.layout('default'),
     VPanel: loader.component('panel'),
+    VMap: loader.component('map'),
   },
 };

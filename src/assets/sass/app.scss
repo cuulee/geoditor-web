@@ -1,4 +1,6 @@
 @import 'branding.scss';
+@import 'panel.scss';
+@import 'map.scss';
 
 html, body {
   font-size: 16px;
@@ -52,6 +54,8 @@ aside {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
