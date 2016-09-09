@@ -21,7 +21,7 @@ export default {
     map.on('pm:create', (e) => {
       const layer = e.layer;
       layer.pm.enable({
-        snap: true,
+        snappable: true,
         draggable: true,
       });
     });
