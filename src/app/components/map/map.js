@@ -17,5 +17,13 @@ export default {
     }).addTo(map);
 
     map.pm.addControls();
+
+    map.on('pm:create', (e) => {
+      const layer = e.layer;
+      layer.pm.enable({
+        snap: true,
+        draggable: true,
+      });
+    });
   },
 };
