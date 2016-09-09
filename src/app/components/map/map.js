@@ -1,5 +1,6 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import 'leaflet.pm/dist/leaflet.pm.css';
 
 export default {
   mixins: [
@@ -14,5 +15,7 @@ export default {
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    map.pm.addControls();
   },
 };
