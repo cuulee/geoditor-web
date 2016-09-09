@@ -60,5 +60,12 @@ section {
 }
 
 footer {
-  height: 20px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: .7em;
+  text-align: center;
+
+  .creator-note {
+
+  }
 }
