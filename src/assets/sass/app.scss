@@ -1,6 +1,7 @@
 @import 'branding.scss';
 @import 'panel.scss';
 @import 'map.scss';
+@import 'search.scss';
 
 html, body {
   font-size: 16px;
@@ -21,7 +22,7 @@ header {
   display: flex;
   align-items: center;
 
-  padding: 10px;
+  padding: 20px;
 
   box-sizing: border-box;
   height: 50px;

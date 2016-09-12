@@ -7,3 +7,29 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+
+input {
+  box-sizing: border-box;
+  font-size: .9em;
+  padding: .8em;
+  margin: 0;
+  width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  background-color: #f3f3f3;
+}
+
+button {
+  box-sizing: border-box;
+  font-size: .9em;
+  padding: .8em 1em;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  margin: 0;
+  background-color: #333;
+  color: #f3f3f3;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
