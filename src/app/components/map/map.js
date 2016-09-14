@@ -18,15 +18,14 @@ export default {
   computed: {
     center() {
       const latlng = store.state.location.activeLocation || this.latlng;
-      console.log('why');
       if (this.map) {
-        this.map.panTo(latlng);
+        this.map.setView(latlng, 13);
       }
       return latlng;
     },
   },
   mounted() {
-    this.map = L.map('map').setView(this.latlng, 13);
+    this.map = L.map('map');
     const map = this.map;
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
