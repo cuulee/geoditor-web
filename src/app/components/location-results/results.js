@@ -1,3 +1,4 @@
+import locationService from './../../services/location';
 import store from './../../store';
 
 
@@ -6,12 +7,10 @@ export default {
   ],
   props: {
   },
-  data() {
-    return {
-      address: '',
-    };
-  },
   methods: {
+    selectLocation(latlng) {
+      locationService.setLocation(latlng);
+    },
   },
   computed: {
     location() {

@@ -1,4 +1,4 @@
 export default {
   searchResults: null,
-  selected: null,
+  activeLocation: null,
 };

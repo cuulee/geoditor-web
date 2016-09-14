@@ -28,3 +28,7 @@ export const checkAuthentication = ({ commit }) => {
 export const searchLocation = ({ commit }, result) => {
   commit(types.LOCATION_SEARCH, result);
 };
+
+export const setLocation = ({ commit }, latlng) => {
+  commit(types.LOCATION_SET, latlng);
+};

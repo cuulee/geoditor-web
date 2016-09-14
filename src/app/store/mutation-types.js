@@ -8,3 +8,4 @@ export const LOGIN = 'LOGIN';
 
 // Location
 export const LOCATION_SEARCH = 'LOCATION_SEARCH';
+export const LOCATION_SET = 'LOCATION_SET';
