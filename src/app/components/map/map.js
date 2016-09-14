@@ -12,20 +12,25 @@ export default {
   data() {
     return {
       map: null,
-      latlng: [51.505, -0.09],
+      location: store.state.location,
     };
   },
   computed: {
-    center() {
-      const latlng = store.state.location.activeLocation || this.latlng;
-      if (this.map) {
-        this.map.setView(latlng, 13);
-      }
-      return latlng;
+  },
+  watch: {
+    /* eslint quote-props: 0 */
+    'location': {
+      deep: true,
+      handler(location) {
+        if (location.activeLocation) {
+          this.map.setView(location.activeLocation, 13);
+        }
+      },
     },
   },
   mounted() {
-    this.map = L.map('map');
+    const center = this.location.activeLocation || [51.505, -0.09];
+    this.map = L.map('map').setView(center, 13);
     const map = this.map;
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
