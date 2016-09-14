@@ -1,14 +1,19 @@
+import locationService from './../../services/location';
+
 export default {
   mixins: [
   ],
   props: {
   },
-  data: {
+  data() {
+    return {
+      address: '',
+    };
   },
   methods: {
-    foo() {
-      alert('test');
-    }
+    search(loc) {
+      locationService.search(loc);
+    },
   },
   computed: {
   },

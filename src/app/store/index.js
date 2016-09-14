@@ -16,6 +16,7 @@ import * as getters from './getters';
 // Modules
 import account from './modules/account';
 import auth from './modules/auth';
+import location from './modules/location';
 
 Vue.use(Vuex);
 
@@ -38,6 +39,7 @@ export default new Vuex.Store({
   modules: {
     account,
     auth,
+    location,
   },
 
   /**

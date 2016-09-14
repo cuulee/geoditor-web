@@ -24,3 +24,7 @@ export const logout = ({ commit }) => {
 export const checkAuthentication = ({ commit }) => {
   commit(types.CHECK_AUTHENTICATION);
 };
+
+export const searchLocation = ({ commit }, result) => {
+  commit(types.LOCATION_SEARCH, result);
+};

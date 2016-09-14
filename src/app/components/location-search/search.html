@@ -3,7 +3,7 @@
   <input
   type="text"
   v-model="address"
-  v-on="change: foo"
+  v-on:change="search(address)"
   placeholder="Search for a location" />
   <button class="black"><i class="fa fa-search"></i></button>
 </div>
