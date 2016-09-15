@@ -23,7 +23,7 @@ export default {
       deep: true,
       handler(location) {
         if (location.activeLocation) {
-          this.map.setView(location.activeLocation, 13);
+          this.map.setView(location.activeLocation, 15);
         }
       },
     },

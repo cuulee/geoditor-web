@@ -16,6 +16,7 @@ const clearResults = () => {
 
 const setLocation = ({ lat, lng }) => {
   store.dispatch('setLocation', [lat, lng]);
+  clearResults();
 };
 
 export default {

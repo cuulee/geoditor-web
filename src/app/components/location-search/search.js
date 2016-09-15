@@ -1,4 +1,5 @@
 import locationService from './../../services/location';
+import store from './../../store';
 
 export default {
   mixins: [
@@ -8,6 +9,7 @@ export default {
   data() {
     return {
       address: '',
+      state: store.state.location,
     };
   },
   methods: {
@@ -20,6 +22,10 @@ export default {
       } else {
         locationService.clearResults();
       }
+    },
+    selectLocation(latlng) {
+      locationService.setLocation(latlng);
+      this.address = '';
     },
   },
   computed: {
