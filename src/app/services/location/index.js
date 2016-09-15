@@ -6,7 +6,7 @@ const searchAddress = (address) => {
     const result = JSON.parse(response.body).results;
     store.dispatch('searchLocation', result);
   }, () => {
-    console.throw('google search error');
+    // error
   });
 };
 
