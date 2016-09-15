@@ -44,7 +44,7 @@
     "shelljs": "^0.7.4",
     "vue": "^2.0.0-rc.6",
     "vue-resource": "^0.9.3",
-    "vue-router": "^2.0.0-rc.3",
+    "vue-router": "^2.0.0-rc.5",
     "vuex": "^2.0.0-rc.5",
     "vuex-router-sync": "^3.0.0"
   },
@@ -83,7 +83,7 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^2.0.6",
     "vue-html-loader": "^1.2.3",
-    "vue-loader": "^9.3.2",
+    "vue-loader": "^9.4.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",

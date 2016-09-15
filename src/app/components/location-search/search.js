@@ -9,7 +9,6 @@ export default {
   data() {
     return {
       address: '',
-      state: store.state.location,
     };
   },
   methods: {
@@ -29,6 +28,9 @@ export default {
     },
   },
   computed: {
+    location() {
+      return store.state.location;
+    },
   },
   mounted() {
   },

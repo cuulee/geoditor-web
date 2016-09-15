@@ -9,7 +9,7 @@
   <div class="search-results-container">
     <ul class="search-results">
       <li
-      v-for="result in state.searchResults"
+      v-for="result in location.searchResults"
       v-on:click="selectLocation(result.geometry.location)">
         {{result.formatted_address}}
       </li>
