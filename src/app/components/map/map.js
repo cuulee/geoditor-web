@@ -1,6 +1,4 @@
 import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet.pm/dist/leaflet.pm.css';
 
 import store from './../../store';
 

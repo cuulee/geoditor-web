@@ -124,6 +124,8 @@ window.$ = window.jQuery = jQuery;
  */
 import L from 'leaflet';
 import 'leaflet.pm';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet.pm/dist/leaflet.pm.css';
 
 window.L = L;
 
