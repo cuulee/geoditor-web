@@ -1,5 +1,4 @@
 import L from 'leaflet';
-
 import store from './../../store';
 
 export default {
@@ -11,10 +10,22 @@ export default {
     return {
       map: null,
       location: store.state.location,
-      geodata: store.state.geodata,
+      layers: store.state.geo.layers,
     };
   },
   computed: {
+  },
+  methods: {
+    drawGeodata(layers) {
+      console.log(layers);
+    },
+    keepStoreInSync() {
+      // this.layer.forEach((layer) => {
+      //   layer.on('pm:edit', () => {
+      //     console.log('edited');
+      //   });
+      // });
+    },
   },
   watch: {
     /* eslint quote-props: 0 */
@@ -26,6 +37,12 @@ export default {
         }
       },
     },
+    // 'geo': {
+    //   handler(layers) {
+    //     console.log('data changed');
+    //     this.drawGeodata(layers);
+    //   },
+    // },
   },
   mounted() {
     const center = this.location.activeLocation || [51.505, -0.09];
@@ -46,6 +63,7 @@ export default {
       });
     });
 
-    console.log(this.geodata);
+    this.drawGeodata(this.layers);
+    // this.keepStoreInSync();
   },
 };
