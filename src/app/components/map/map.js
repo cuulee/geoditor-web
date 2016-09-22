@@ -11,6 +11,7 @@ export default {
     return {
       map: null,
       location: store.state.location,
+      geodata: store.state.geodata,
     };
   },
   computed: {
@@ -44,5 +45,7 @@ export default {
         draggable: true,
       });
     });
+
+    console.log(this.geodata);
   },
 };

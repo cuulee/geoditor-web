@@ -17,6 +17,7 @@ import * as getters from './getters';
 import account from './modules/account';
 import auth from './modules/auth';
 import location from './modules/location';
+import geodata from './modules/geodata';
 
 Vue.use(Vuex);
 
@@ -40,6 +41,7 @@ export default new Vuex.Store({
     account,
     auth,
     location,
+    geodata,
   },
 
   /**
