@@ -3,7 +3,7 @@ import {
 } from './../../mutation-types';
 
 export default {
-  [GEODATA](state, geolayers) {
-    state.geolayers = geolayers;
+  [GEODATA](state, data) {
+    state.data = data;
   },
 };

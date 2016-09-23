@@ -10,14 +10,16 @@ export default {
     return {
       map: null,
       location: store.state.location,
-      layers: store.state.geo.layers,
+      data: store.state.geo.data,
     };
   },
   computed: {
   },
   methods: {
-    drawGeodata(layers) {
-      console.log(layers);
+    drawGeodata(data) {
+      data.forEach((geojson) => {
+        L.geoJson(geojson).addTo(this.map);
+      });
     },
     keepStoreInSync() {
       // this.layer.forEach((layer) => {
@@ -63,7 +65,7 @@ export default {
       });
     });
 
-    this.drawGeodata(this.layers);
-    // this.keepStoreInSync();
+    this.drawGeodata(this.data);
+    this.keepStoreInSync();
   },
 };

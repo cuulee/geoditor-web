@@ -1,5 +1,3 @@
-import L from 'leaflet';
-
 const mock = {
   type: 'FeatureCollection',
   features: [
@@ -46,8 +44,6 @@ const mock = {
   ],
 };
 
-const layer = L.geoJson(mock);
-
 export default {
-  layers: [layer],
+  data: [mock],
 };
