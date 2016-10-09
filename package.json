@@ -39,6 +39,7 @@
     "jquery": "^3.1.0",
     "leaflet": "^1.0.1",
     "leaflet.pm": "^0.11.1",
+    "lodash": "^4.16.4",
     "normalize.css": "^4.2.0",
     "npm": "^3.10.7",
     "shelljs": "^0.7.4",

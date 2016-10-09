@@ -9,11 +9,15 @@
  */
 
 import authService from './../../services/auth';
+import loader from './../../utils/loader';
 
 export default {
   methods: {
     logout() {
       authService.logout();
     },
+  },
+  components: {
+    VCategoryList: loader.component('category-list'),
   },
 };

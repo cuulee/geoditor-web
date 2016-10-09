@@ -8,19 +8,13 @@
     </div>
   </header>
   <main>
-    <aside>
-      <nav>
-        <ul>
-          <li>
-            <span></span>
-            <ul>
-              <li><span>Uncategorized</span></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <section>
+    <section class="sidebar">
+      <nav></nav>
+      <div class="widget">
+        <VCategoryList></VCategoryList>
+      </div>
+    </section>
+    <section class="main-content">
       <!-- Content will be placed here -->
       <slot></slot>
     </section>
