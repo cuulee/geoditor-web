@@ -24,6 +24,16 @@ export default [
       auth: false,
     },
   },
+  {
+    path: '/maps/:id',
+    name: 'maps.index',
+    component: loader.page('maps', 'index'),
+
+    // If the user needs to be authenticated to view this page
+    meta: {
+      auth: false,
+    },
+  },
 
   // Account
   {

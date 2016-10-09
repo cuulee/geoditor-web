@@ -4,8 +4,7 @@ import store from './../../store';
 export default {
   mixins: [
   ],
-  props: {
-  },
+  props: ['onMapMount'],
   data() {
     return {
       map: null,
@@ -18,7 +17,12 @@ export default {
   methods: {
     drawGeodata(data) {
       data.forEach((geojson) => {
-        L.geoJson(geojson).addTo(this.map);
+        const layer = L.geoJson(geojson).addTo(this.map);
+        layer.on('click', () => {
+          layer.pm.toggleEdit({
+            snappable: true,
+          });
+        });
       });
     },
     keepStoreInSync() {
@@ -47,7 +51,7 @@ export default {
     // },
   },
   mounted() {
-    const center = this.location.activeLocation || [51.505, -0.09];
+    const center = this.location.activeLocation || [48.7758459, 9.1829321];
     this.map = L.map('map').setView(center, 13);
     const map = this.map;
 
@@ -55,15 +59,7 @@ export default {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    map.pm.addControls();
-
-    map.on('pm:create', (e) => {
-      const layer = e.layer;
-      layer.pm.enable({
-        snappable: true,
-        draggable: true,
-      });
-    });
+    this.onMapMount(map);
 
     this.drawGeodata(this.data);
     this.keepStoreInSync();
