@@ -18,6 +18,5 @@ export default {
     },
   },
   components: {
-    VCategoryList: loader.component('category-list'),
   },
 };

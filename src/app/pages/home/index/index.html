@@ -7,7 +7,9 @@
     <div slot="heading" class="panel-toolbar">
       <v-location-search></v-location-search>
     </div>
-
+    <div slot="body" class="filter">
+      <v-geodata-filter></v-geodata-filter>
+    </div>
     <v-map slot="body" v-bind:onMapMount="initMap"></v-map>
     <div slot="footer">
 

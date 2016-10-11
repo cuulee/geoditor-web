@@ -3,10 +3,14 @@
  * ============
  */
 
-import state from './state';
-import mutations from './mutations';
-
 export default {
-  state,
-  mutations,
+  state: {
+    data: [],
+    properties: ['Category', 'Name', 'Parking Spots'],
+  },
+  mutations: {
+    GEODATA(state, data) {
+      state.data = data;
+    },
+  },
 };

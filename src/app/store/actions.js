@@ -32,3 +32,7 @@ export const searchLocation = ({ commit }, result) => {
 export const setLocation = ({ commit }, latlng) => {
   commit(types.LOCATION_SET, latlng);
 };
+
+export const setGeodata = ({ commit }, data) => {
+  commit(types.GEODATA, data);
+};
