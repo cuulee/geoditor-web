@@ -9,7 +9,7 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createLogger from 'vuex/logger';
+// import createLogger from 'vuex/logger';
 import * as actions from './actions';
 import * as getters from './getters';
 
@@ -52,5 +52,5 @@ export default new Vuex.Store({
   /**
    * Plugins used in the store
    */
-  plugins: debug ? [createLogger()] : [],
+  // plugins: debug ? [createLogger()] : [],
 });
