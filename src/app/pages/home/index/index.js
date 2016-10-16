@@ -3,9 +3,7 @@ import loader from './../../../utils/loader';
 export default {
   methods: {
     initMap(map) {
-      map.pm.addControls({
-        editPolygon: false,
-      });
+      map.pm.addControls();
     },
   },
   components: {
