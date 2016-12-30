@@ -9,7 +9,7 @@ module.exports = {
   ],
   rules: {
     'global-require': 0,
-
+    'no-underscore-dangle': 0,
     'no-param-reassign': 0,
 
     'import/no-unresolved': 0,

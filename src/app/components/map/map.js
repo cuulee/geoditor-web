@@ -59,6 +59,8 @@ export default {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
+    L.marker([48.7758459, 9.1829321]).addTo(map);
+
     this.onMapMount(map);
 
     this.drawGeodata(this.data);
