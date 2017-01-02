@@ -18,10 +18,9 @@ export default {
     drawGeodata(data) {
       data.forEach((geojson) => {
         const layer = L.geoJson(geojson).addTo(this.map);
-        layer.on('click', () => {
-          layer.pm.toggleEdit({
-            snappable: true,
-          });
+        layer.pm.toggleEdit({
+          draggable: true,
+          snappable: true,
         });
       });
     },
